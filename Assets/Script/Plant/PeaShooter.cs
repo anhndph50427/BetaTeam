@@ -30,8 +30,7 @@ public class PeaShooter : PlantBase
     {
         if (ZombiesDetected().collider != null)
         {
-            Debug.Log("Vào vùng bắn");
-            Shooting();
+            animator.SetBool("check",true);
         }
         else
         {
@@ -41,12 +40,12 @@ public class PeaShooter : PlantBase
 
     private void Shooting()
     {
-        if (!(canFire < Time.time)) return;
+        //if (!(canFire < Time.time)) return;
 
         GameObject newBullet = Instantiate(bullet_prefabs , pos_Shoot.position , Quaternion.identity);
         Destroy(newBullet , 4f);
         
-        canFire = Time.time + fireRate;
+        //canFire = Time.time + fireRate;
     }
 
     RaycastHit2D ZombiesDetected() => Physics2D.Raycast(transform.position, Vector2.right, distanceLimit, whatIsMask);
