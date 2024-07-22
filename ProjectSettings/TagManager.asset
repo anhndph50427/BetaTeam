@@ -4,16 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Zombie
+  - Zombies
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Zombies
   - Water
   - UI
-  - 
-  - 
+  - Sun
+  - Plant
   - 
   - 
   - 
@@ -41,7 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: New Layer 1
-    uniqueID: 545643381
     locked: 0
