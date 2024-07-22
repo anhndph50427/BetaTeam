@@ -17,12 +17,18 @@ public class PeaShooter : PlantBase
     [SerializeField] private float fireRate; // Tốc độ bắn
     private float canFire; // Thời gian có thể bắn tiếp
 
+    // Nhóm biến để lưu âm thanh bắn
+    [Header("Audio info")]
+    public AudioClip shootSound; // Âm thanh khi bắn đạn
+    private AudioSource audioSource; // Nguồn âm thanh
+
     // Hàm khởi tạo ban đầu
     void Start()
     {
         base.Start(); // Gọi hàm Start của lớp cha
         canFire = 0; // Khởi tạo thời gian bắn bằng 0
         distanceLimit = Mathf.Abs(distanceLimit); // Đảm bảo giới hạn khoảng cách luôn dương
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Hàm cập nhật hàng khung hình
@@ -43,7 +49,7 @@ public class PeaShooter : PlantBase
         else
         {
             animator.SetBool("check", false);
-            Debug.Log("Thoát khỏi vùng bắn"); // In ra log khi không còn zombie trong vùng tấn công 
+            
         }
     }
 
@@ -60,6 +66,20 @@ public class PeaShooter : PlantBase
         
         // Cập nhật thời gian có thể bắn tiếp
         // canFire = Time.time + fireRate;
+
+        if(shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+            Debug.Log("âm thanh bắn");
+        }
+        else Debug.Log("không nhận âm thanh");
+
+        if (audioSource == null)
+        {
+           
+            Debug.Log("audioSound Null");
+        }
+       
     }
 
     // Hàm để phát hiện zombie bằng Raycast

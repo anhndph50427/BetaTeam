@@ -8,6 +8,8 @@ public class ZombieBase : MonoBehaviour
     [SerializeField] protected float speed;
     protected Animator animator;
     protected SpriteRenderer sr;
+
+    protected bool canMove = false;
     protected void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,7 +19,19 @@ public class ZombieBase : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        moving(speed);
+        if (canMove == true)
+        {
+            moving(speed);
+        }
+    }
+
+    protected void startMove()
+    {
+        canMove = true;
+    }
+    protected void stopMove()
+    {
+        canMove = false;
     }
 
     protected void moving(float x)
