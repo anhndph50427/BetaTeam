@@ -1,55 +1,71 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections; 
+using System.Collections.Generic; 
 using UnityEngine;
 
+// Khai báo lớp PeaShooter thừa kế từ PlantBase
 public class PeaShooter : PlantBase
 {
+    // Nhóm biến để lưu thông tin về Raycast
     [Header("Raycast info")]
-    [SerializeField] private LayerMask whatIsMask;
-    [SerializeField] private float distanceLimit;
+    [SerializeField] private LayerMask whatIsMask; // Lớp mask để xác định đối tượng cần kiểm tra va chạm
+    [SerializeField] private float distanceLimit; // Giới hạn khoảng cách của Raycast
 
-    [Header("Shoot infor")]
-    [SerializeField] private GameObject bullet_prefabs;
-    [SerializeField] private Transform pos_Shoot;
-    [SerializeField] private float fireRate;
-    private float canFire;
+    // Nhóm biến để lưu thông tin về bắn
+    [Header("Shoot info")]
+    [SerializeField] private GameObject bullet_prefabs; // Prefab của đạn
+    [SerializeField] private Transform pos_Shoot; // Vị trí bắn đạn
+    [SerializeField] private float fireRate; // Tốc độ bắn
+    private float canFire; // Thời gian có thể bắn tiếp
+
+    // Hàm khởi tạo ban đầu
     void Start()
     {
-        base.Start();
-        canFire = 0;
-        distanceLimit = Mathf.Abs(distanceLimit);
+        base.Start(); // Gọi hàm Start của lớp cha
+        canFire = 0; // Khởi tạo thời gian bắn bằng 0
+        distanceLimit = Mathf.Abs(distanceLimit); // Đảm bảo giới hạn khoảng cách luôn dương
     }
 
+    // Hàm cập nhật hàng khung hình
     void Update()
     {
-        base.Update();
-        Attack();
+        base.Update(); // Gọi hàm Update của lớp cha
+        Attack(); // Gọi hàm Attack để kiểm tra và tấn công zombie
     }
 
+    // Hàm để xử lý việc tấn công
     private void Attack()
     {
+        // Kiểm tra xem có zombie trong vùng tấn công không
         if (ZombiesDetected().collider != null)
         {
-            animator.SetBool("check",true);
+            animator.SetBool("check", true); // Đặt biến check của animator thành true nếu phát hiện zombie
         }
         else
         {
-            Debug.Log("Thoát khỏi vùng bắn");
+            animator.SetBool("check", false);
+            Debug.Log("Thoát khỏi vùng bắn"); // In ra log khi không còn zombie trong vùng tấn công 
         }
     }
 
+    // Hàm để bắn đạn
     private void Shooting()
     {
-        //if (!(canFire < Time.time)) return;
+        // Kiểm tra nếu chưa đủ thời gian để bắn tiếp thì thoát khỏi hàm
+        // if (!(canFire < Time.time)) return;
 
-        GameObject newBullet = Instantiate(bullet_prefabs , pos_Shoot.position , Quaternion.identity);
-        Destroy(newBullet , 4f);
+        // Tạo mới một viên đạn tại vị trí bắn
+        GameObject newBullet = Instantiate(bullet_prefabs, pos_Shoot.position, Quaternion.identity);
+        // Hủy viên đạn sau 4 giây
+        Destroy(newBullet, 4f);
         
-        //canFire = Time.time + fireRate;
+        // Cập nhật thời gian có thể bắn tiếp
+        // canFire = Time.time + fireRate;
     }
 
+    // Hàm để phát hiện zombie bằng Raycast
     RaycastHit2D ZombiesDetected() => Physics2D.Raycast(transform.position, Vector2.right, distanceLimit, whatIsMask);
 
+    // Hàm để vẽ đường Raycast trong chế độ Gizmos (hữu ích khi làm việc trong Editor)
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + distanceLimit, transform.position.y, 0));

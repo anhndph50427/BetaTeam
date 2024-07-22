@@ -33,8 +33,9 @@ public class ZombieBase : MonoBehaviour
 
     IEnumerator flashFx()
     {
-        sr.color = new Color(1f, 1, 1);
-        yield return new WaitForSeconds(0.2f);
         sr.color = new Color(0.5f, 0.5f, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        sr.color = new Color(1f, 1, 1);
+
     }
 }
