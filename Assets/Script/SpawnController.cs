@@ -20,8 +20,8 @@ public class SpawnController : MonoBehaviour
     {
         while (true)
         {
-            GameObject newSun =  Instantiate(sun_preFabs , new Vector3(Random.Range(-9,6) , 6.5f , transform.position.z ), Quaternion.identity);
-            newSun.GetComponent<Sun>().stopPos = Random.Range(-3,3);
+            GameObject newSun =  Instantiate(sun_preFabs , new Vector3(Random.Range(-6f,9) , 6.5f , transform.position.z ), Quaternion.identity);
+            newSun.GetComponent<Sun>().stopPos = Random.Range(-4,5);
             yield return new WaitForSeconds(5);
         }
     }
