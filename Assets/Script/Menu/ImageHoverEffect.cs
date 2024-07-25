@@ -5,10 +5,9 @@ using UnityEngine.EventSystems;
 public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Image image;
-    public Color hoverColor = Color.gray; // Màu khi di chuột vào
+    public Color hoverColor = Color.gray; 
     private Color originalColor;
-    public Canvas targetCanvas; // Canvas cần ẩn/hiện
-    private CanvasGroup canvasGroup;
+    public Canvas targetCanvas;
 
     void Start()
     {
@@ -17,25 +16,19 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             originalColor = image.color;
 
-            // Kiểm tra texture có thể đọc được không trước khi đặt alphaHitTestMinimumThreshold
+           
             if (image.sprite.texture.isReadable)
             {
                 image.alphaHitTestMinimumThreshold = 0.1f;
             }
             else
             {
-                Debug.LogError("Texture không thể đọc được. Bật 'Read/Write Enabled' trong cài đặt nhập của texture.");
-            }
-
-            // Thiết lập CanvasGroup nếu có
-            if (targetCanvas != null)
-            {
-                canvasGroup = targetCanvas.GetComponent<CanvasGroup>();
+                Debug.LogError("Texture không thể đọc đượ");
             }
         }
         else
         {
-            Debug.LogError("Image component not found!");
+            Debug.LogError("lỗi");
         }
     }
 
@@ -59,18 +52,8 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (targetCanvas != null)
         {
-            if (canvasGroup != null)
-            {
-                // Toggle visibility and raycast blocking
-                bool isActive = targetCanvas.gameObject.activeSelf;
-                targetCanvas.gameObject.SetActive(!isActive);
-                canvasGroup.blocksRaycasts = !isActive;
-            }
-            else
-            {
-                // Nếu không có CanvasGroup, chỉ cần toggle visibility
-                targetCanvas.gameObject.SetActive(!targetCanvas.gameObject.activeSelf);
-            }
+            
+            targetCanvas.gameObject.SetActive(!targetCanvas.gameObject.activeSelf);
         }
     }
 }
