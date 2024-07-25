@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Image image;
-    public Color hoverColor = Color.gray; 
+    public Color hoverColor = Color.gray;
     private Color originalColor;
-    public GameObject targetGameobj;
-    public Canvas targetCanvas;
+    public GameObject targetGameobj;  // Đối tượng cần ẩn/hiện khi click
+    public GameObject targetGameobj_2; // Đối tượng thứ hai cần ẩn/hiện khi click
+    public SceneAsset sceneToLoad;  // SceneAsset để kéo thả cảnh vào từ Editor
 
     void Start()
     {
@@ -17,19 +20,19 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             originalColor = image.color;
 
-           
+            // Kiểm tra nếu texture có thể đọc được
             if (image.sprite.texture.isReadable)
             {
                 image.alphaHitTestMinimumThreshold = 0.1f;
             }
             else
             {
-                Debug.LogError("Texture không thể đọc đượ");
+                Debug.LogError("Texture không thể đọc được. Hãy bật 'Read/Write Enabled' trong cài đặt nhập của texture.");
             }
         }
         else
         {
-            Debug.LogError("lỗi");
+            Debug.LogError("Không tìm thấy thành phần Image!");
         }
     }
 
@@ -51,16 +54,23 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // Ẩn hoặc hiện targetGameobj khi nhấp vào hình ảnh
         if (targetGameobj != null)
         {
-            
-            targetGameobj.gameObject.SetActive(!targetGameobj.gameObject.activeSelf);
+            targetGameobj.SetActive(!targetGameobj.activeSelf);
         }
-        
-        if (targetCanvas != null)
-        {
 
-            targetCanvas.gameObject.SetActive(!targetCanvas.gameObject.activeSelf);
+        // Ẩn hoặc hiện targetGameobj_2 khi nhấp vào hình ảnh
+        if (targetGameobj_2 != null)
+        {
+            targetGameobj_2.SetActive(!targetGameobj_2.activeSelf);
+        }
+
+        // Chuyển cảnh nếu sceneToLoad không rỗng
+        if (sceneToLoad != null)
+        {
+            string sceneName = sceneToLoad.name; // Lấy tên cảnh từ SceneAsset
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
