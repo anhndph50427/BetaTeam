@@ -7,6 +7,7 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private Image image;
     public Color hoverColor = Color.gray; 
     private Color originalColor;
+    public GameObject targetGameobj;
     public Canvas targetCanvas;
 
     void Start()
@@ -50,9 +51,15 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (targetCanvas != null)
+        if (targetGameobj != null)
         {
             
+            targetGameobj.gameObject.SetActive(!targetGameobj.gameObject.activeSelf);
+        }
+        
+        if (targetCanvas != null)
+        {
+
             targetCanvas.gameObject.SetActive(!targetCanvas.gameObject.activeSelf);
         }
     }
