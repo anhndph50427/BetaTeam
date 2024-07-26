@@ -2,43 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CherryBomb : PlantBase
+public class CherryBomb : MonoBehaviour
 {
-    [SerializeField] private float delayBeforeAtk; 
-    [SerializeField] private float atkDuration; 
+    public Animator animator;
 
-    private bool isInAtkState = false;
-
-    void Start()
+    private void Start()
     {
-        base.Start(); 
-
-        //if (animator != null)
-        //{
-        //    //animator.SetTrigger("ATK");
-        //}
-
-        StartCoroutine(ActivateAtkState());
+        animator = GetComponent<Animator>();
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        base.Update(); 
-    }
-
-    private IEnumerator ActivateAtkState()
-    {
-        yield return new WaitForSeconds(delayBeforeAtk);
-
-        if (animator != null)
+        if (collider.CompareTag("Zombie"))
         {
             animator.SetTrigger("ATK");
+            Destroy(gameObject, 1f);
         }
-
-        isInAtkState = true;
-
-        yield return new WaitForSeconds(atkDuration);
-
-        Destroy(gameObject);
     }
 }

@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PotatoMine : PlantBase
+public class PotatoMine : MonoBehaviour
 {
-    public float sproutTime=10f;
+    public Animator animator;
+    public float sproutTime = 5f;
     private bool isSprouted = false;
 
-    private void Start()
+    void Start()
     {
-        base.Start();
-        Invoke("Sprout", sproutTime);
+        animator = GetComponent<Animator>();
+        Invoke("Sprout", sproutTime); // Gọi hàm Sprout sau 5 giây
     }
 
-    private void Sprout()
+    void Sprout()
     {
         isSprouted = true;
         animator.SetBool("TroiLen", true);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Zombies") && isSprouted)
+        if (collider.CompareTag("Zombie") && isSprouted)
         {
             animator.SetTrigger("ATK");
             Destroy(gameObject, 1f);
