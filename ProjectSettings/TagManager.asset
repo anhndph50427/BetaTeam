@@ -3,18 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Zombies
-  - Plants
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Zombies
+  - 
   - Water
   - UI
-  - Sun
-  - Plant
+  - 
+  - 
   - 
   - 
   - 

@@ -8,6 +8,8 @@ public class ZombieBase : MonoBehaviour
     [SerializeField] protected float speed;
     protected Animator animator;
     protected SpriteRenderer sr;
+
+    protected bool canMove = false;
     protected void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,7 +19,19 @@ public class ZombieBase : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        moving(speed);
+        if (canMove == true)
+        {
+            moving(speed);
+        }
+    }
+
+    protected void startMove()
+    {
+        canMove = true;
+    }
+    protected void stopMove()
+    {
+        canMove = false;
     }
 
     protected void moving(float x)
@@ -33,8 +47,9 @@ public class ZombieBase : MonoBehaviour
 
     IEnumerator flashFx()
     {
-        sr.color = new Color(1f, 1, 1);
-        yield return new WaitForSeconds(0.2f);
         sr.color = new Color(0.5f, 0.5f, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        sr.color = new Color(1f, 1, 1);
+
     }
 }
