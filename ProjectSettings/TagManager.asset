@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Zombies
+  - Plants
   layers:
   - Default
   - TransparentFX
