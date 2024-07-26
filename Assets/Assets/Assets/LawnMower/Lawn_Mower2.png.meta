@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41ef793b029aedf46bd821e4616b7138
+guid: a27e3b53f46537746a026e50773ed13c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lawn_Mower2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 98
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702a71d1fda5dde42bc36fc25240a126
+      internalID: 1307229163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +127,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lawn_Mower2_0: 1307229163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
