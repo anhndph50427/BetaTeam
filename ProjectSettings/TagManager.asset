@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags: []
-=======
-  tags:
-  - Zombies
->>>>>>> parent of 277a036 (Cây ĂN thỊT)
   layers:
   - Default
   - TransparentFX
