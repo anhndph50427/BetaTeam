@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class NotificationManager : MonoBehaviour
+public class SpawnZombie : MonoBehaviour
 {
     [System.Serializable]
     public class Notification
