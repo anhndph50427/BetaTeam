@@ -17,16 +17,30 @@ public class Chomper : PlantBase
 
     }
 
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Zombies") && !isEating)
+        {
+            StartCoroutine(EatZombie(collider.gameObject));
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Zombies") && !isEating)
+        if (collision.gameObject.CompareTag("Zombies") && isEating == true)
         {
-            StartCoroutine(EatZombie(collision.gameObject));
+            health -= 1;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
     private IEnumerator EatZombie(GameObject zombie)
     {
+        isEating = true;
+
         animator.SetTrigger("PreparingToEat");
 
         yield return new WaitForSeconds(0.5f);
@@ -35,10 +49,10 @@ public class Chomper : PlantBase
 
         animator.SetTrigger("Eat");
 
-        isEating = true;
-
         yield return new WaitForSeconds(eatDuration);
 
         isEating = false;
+
+        animator.SetTrigger("Idle");
     }
 }
