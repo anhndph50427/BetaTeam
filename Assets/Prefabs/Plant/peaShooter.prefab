@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909217161058203171}
   - component: {fileID: 8696855561762883128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "B\xF3ng \u0111\u1ED5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7392933453226330485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pos_Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1850392025583236469}
   - component: {fileID: 6145687550754391333}
   - component: {fileID: 4817863936601554587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: peaShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

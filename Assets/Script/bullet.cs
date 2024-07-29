@@ -5,6 +5,8 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     [SerializeField] private float speed;
+
+    public float AtkBullet;
     // Update is called once per frame
     void Update()
     {
@@ -16,7 +18,7 @@ public class bullet : MonoBehaviour
     {
         if(collision.GetComponent<ZombieBase>() != null)
         {
-            collision.GetComponent<ZombieBase>().takeDame(1);
+            collision.GetComponent<ZombieBase>().takeDame(AtkBullet);
         }
 
 

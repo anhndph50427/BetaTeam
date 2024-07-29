@@ -10,6 +10,7 @@ public class ZombieBase : MonoBehaviour
     protected SpriteRenderer sr;
 
     protected bool canMove = false;
+    
     protected void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,13 +18,6 @@ public class ZombieBase : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
-    {
-        if (canMove == true)
-        {
-            moving(speed);
-        }
-    }
 
     protected void startMove()
     {
@@ -32,6 +26,13 @@ public class ZombieBase : MonoBehaviour
     protected void stopMove()
     {
         canMove = false;
+    }
+    protected void Update()
+    {
+        if (canMove == true)
+        {
+            moving(speed);
+        }
     }
 
     protected void moving(float x)

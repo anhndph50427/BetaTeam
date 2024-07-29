@@ -9,7 +9,7 @@ public class SpawnController : MonoBehaviour
     {
         Invoke("delayStartCoroutine", 3);
     }
-
+    
 
     void delayStartCoroutine()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpawnZombie : MonoBehaviour
 {
-    [System.Serializable]
+    [System.Serializable] 
     public class Notification
     {
         public GameObject zombiePrefab; // Prefab của zombie
@@ -14,12 +14,12 @@ public class SpawnZombie : MonoBehaviour
 
     public List<Notification> notifications; // Danh sách các thông báo
     public List<Transform> spawnPoints;      // Danh sách các điểm spawn cho zombie
-    public int currentGameTime;              // Thời gian chạy của game
+    
 
     void Update()
     {
         // Cập nhật thời gian hiện tại của game, làm tròn xuống số nguyên gần nhất
-        currentGameTime = Mathf.FloorToInt(Time.time);
+        int currentGameTime = Mathf.FloorToInt(GamePlay.GameTime);
 
         // Kiểm tra từng thông báo
         foreach (Notification notification in notifications)

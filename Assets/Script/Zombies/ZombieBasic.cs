@@ -6,8 +6,9 @@ public class ZombieBasic : ZombieBase
 {
     public AudioClip hitByBullet;
     private AudioSource AudioSource;
+
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         base.Start();
         AudioSource = GetComponent<AudioSource>();
@@ -18,12 +19,22 @@ public class ZombieBasic : ZombieBase
     {
         base.Update();
 
+        if (health <= 0)
+        {
+            GamePlay.instance.deadZombies++;
+            Destroy(gameObject);
+        }
     }
 
+    private void Atk()
+    {
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet"))
         {
+            
             AudioSource.PlayOneShot(hitByBullet);
         }
     }

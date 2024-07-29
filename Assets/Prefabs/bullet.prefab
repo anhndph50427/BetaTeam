@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  AtkBullet: 3
 --- !u!50 &2284080795245971852
 Rigidbody2D:
   serializedVersion: 4

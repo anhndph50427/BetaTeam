@@ -72,6 +72,7 @@ public class PeaShooter : PlantBase
             audioSource.PlayOneShot(shootSound);
             Debug.Log("âm thanh bắn");
         }
+        
         else Debug.Log("không nhận âm thanh");
 
         if (audioSource == null)
