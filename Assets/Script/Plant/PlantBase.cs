@@ -19,6 +19,9 @@ public class PlantBase : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -86,7 +86,7 @@ public class PeaShooter : PlantBase
     // Hàm để phát hiện zombie bằng Raycast
     RaycastHit2D ZombiesDetected() => Physics2D.Raycast(transform.position, Vector2.right, distanceLimit, whatIsMask);
 
-    // Hàm để vẽ đường Raycast trong chế độ Gizmos (hữu ích khi làm việc trong Editor)
+    // Hàm để vẽ đường Raycast trong chế độ Gizmos 
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + distanceLimit, transform.position.y, 0));
