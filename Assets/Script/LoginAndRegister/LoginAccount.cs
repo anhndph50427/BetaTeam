@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class LoginAccount : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class LoginAccount : MonoBehaviour
                 notification.text = "Đăng nhập thành công";
                 PlayerPrefs.SetString("token", get);
                 Debug.Log(get);
+                SceneManager.LoadScene("Menu");
             }
         }
     }
