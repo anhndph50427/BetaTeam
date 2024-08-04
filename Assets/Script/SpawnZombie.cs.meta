@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Script/SpawnZombie.cs.meta
 guid: 3b1b328a6c89e6447b83ec8fce85525f
+========
+guid: 2a2ae26449a679a4dbef333d93691bb5
+>>>>>>>> VinhLong:Assets/Script/Shop/PushWaterItem.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Assets/Assets.meta
 guid: 5a87b7d82e70a5f47b58d2069d71755b
+========
+guid: d5537581a3eaa3f4b8ddf0c7f811859b
+>>>>>>>> VinhLong:Assets/Assets/Menu.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
