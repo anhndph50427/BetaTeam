@@ -277,7 +277,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &1850392025583236469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   health: 0.02
   whatIsMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   distanceLimit: 17.6
   bullet_prefabs: {fileID: 3308974078799076085, guid: b7d3ca254da4b0743babe1677167ec22, type: 3}
   pos_Shoot: {fileID: 7392933453226330485}

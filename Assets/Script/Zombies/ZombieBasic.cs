@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +23,16 @@ public class ZombieBasic : ZombieBase
         {
             GamePlay.instance.deadZombies++;
             Destroy(gameObject);
+        }
+
+        if (checkCollision == true)
+        {
+            
+            animator.SetBool("CheckAtk", true);
+        }
+        else
+        {
+            animator.SetBool("CheckAtk", false);
         }
     }
 

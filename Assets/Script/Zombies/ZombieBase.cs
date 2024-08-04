@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,7 @@ public class ZombieBase : MonoBehaviour
     protected SpriteRenderer sr;
 
     protected bool canMove = false;
+    protected bool checkCollision = false;
     
     protected void Start()
     {
@@ -17,7 +18,29 @@ public class ZombieBase : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Plant"))
+        {
+
+            // tạm dừng di chuyển khi gặp palnt
+            checkCollision = true;
+            stopMove();
+            Debug.Log("đẫ dừng di chuyển");
+        }
+    }
+
+    protected void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Plant"))
+        {
+
+            // tạm dừng di chuyển khi gặp palnt
+            checkCollision = false;
+            startMove();
+            Debug.Log("tiếp tục di chuyển");
+        }
+    }
 
     protected void startMove()
     {
@@ -39,6 +62,8 @@ public class ZombieBase : MonoBehaviour
     {
         transform.Translate(Vector2.left * x * Time.deltaTime);
     }
+
+    
 
     public void takeDame(float dame)
     {
