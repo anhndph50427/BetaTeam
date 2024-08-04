@@ -134,13 +134,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: SunFlower
       objectReference: {fileID: 0}
+    - target: {fileID: 2884134542249866062, guid: 8c6ffd4ccb5be9c489933c02a35250b4, type: 3}
+      propertyPath: color.b
+      value: 0.90943396
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884134542249866062, guid: 8c6ffd4ccb5be9c489933c02a35250b4, type: 3}
+      propertyPath: color.g
+      value: 0.90943396
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884134542249866062, guid: 8c6ffd4ccb5be9c489933c02a35250b4, type: 3}
+      propertyPath: color.r
+      value: 0.90943396
+      objectReference: {fileID: 0}
     - target: {fileID: 7368911278526273113, guid: 8c6ffd4ccb5be9c489933c02a35250b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8775046
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 7368911278526273113, guid: 8c6ffd4ccb5be9c489933c02a35250b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.743497
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 7368911278526273113, guid: 8c6ffd4ccb5be9c489933c02a35250b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -257,11 +269,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1199722164902588013, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.24
+      value: 3.39
       objectReference: {fileID: 0}
     - target: {fileID: 1199722164902588013, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 1199722164902588013, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
       propertyPath: m_LocalPosition.z

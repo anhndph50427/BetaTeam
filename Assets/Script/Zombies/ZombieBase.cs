@@ -6,27 +6,44 @@ public class ZombieBase : MonoBehaviour
 {
     [SerializeField] protected float health;
     [SerializeField] protected float speed;
+    [SerializeField] protected float Atk;
     protected Animator animator;
     protected SpriteRenderer sr;
 
     protected bool canMove = false;
     protected bool checkCollision = false;
     
+    private PlantBase plantBase;
     protected void Start()
     {
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        plantBase = FindObjectOfType<PlantBase>(); // Tìm PlantBase trong toàn cảnh
+
+        if (plantBase == null)
+        {
+            Debug.Log("plantBase null");
+        }
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Plant"))
         {
-
-            // tạm dừng di chuyển khi gặp palnt
             checkCollision = true;
             stopMove();
-            Debug.Log("đẫ dừng di chuyển");
+            Debug.Log("Đã dừng di chuyển");
+
+            // Cập nhật plantBase
+            plantBase = collision.gameObject.GetComponent<PlantBase>();
+            if (plantBase != null)
+            {
+                Debug.Log("PlantBase đã được gán thành công.");
+            }
+            else
+            {
+                Debug.LogError("Không thể gán PlantBase từ va chạm.");
+            }
         }
     }
 
@@ -39,6 +56,19 @@ public class ZombieBase : MonoBehaviour
             checkCollision = false;
             startMove();
             Debug.Log("tiếp tục di chuyển");
+        }
+    }
+
+    protected void Attack()
+    {
+        if (plantBase != null)
+        {
+            Debug.Log("Đang tấn công plantBase.");
+            plantBase.takeDame(Atk);
+        }
+        else
+        {
+            Debug.LogError("PlantBase is null");
         }
     }
 
