@@ -7,7 +7,7 @@ public class CherryBomb : PlantBase
     [SerializeField] private float delayBeforeAtk;
     [SerializeField] private float atkDuration;
 
-    private bool isInAtkState = false;
+    //private bool isInAtkState = false;
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class CherryBomb : PlantBase
             animator.SetTrigger("ATK");
         }
 
-        isInAtkState = true;
+        //isInAtkState = true;
 
         yield return new WaitForSeconds(atkDuration);
 

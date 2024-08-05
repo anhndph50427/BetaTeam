@@ -12,6 +12,13 @@ public class PotatoMine : PlantBase
         base.Start();
         Invoke("Sprout", sproutTime);
     }
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Sprout()
     {
@@ -19,12 +26,16 @@ public class PotatoMine : PlantBase
         animator.SetBool("TroiLen", true);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.CompareTag("Zombies") && isSprouted)
         {
             animator.SetTrigger("ATK");
             Destroy(gameObject, 1f);
+        }
+        if (collider.CompareTag("Zombies") && collider.GetComponent<CircleCollider2D>().enabled)
+        {
+            TakeDamage(100);
         }
     }
 }

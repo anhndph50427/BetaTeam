@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4587408247910167427}
   - component: {fileID: 4997814251813358572}
   - component: {fileID: 3127663701485991580}
+  - component: {fileID: 6222034207822953221}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombies
@@ -141,7 +142,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.6875}
+  m_Offset: {x: 0.014597893, y: 0.6875}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -152,7 +153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84375, y: 1.375}
+  m_Size: {x: 0.5225959, y: 1.375}
   m_EdgeRadius: 0
 --- !u!50 &4997814251813358572
 Rigidbody2D:
@@ -194,3 +195,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  maxHealth: 1000
+--- !u!58 &6222034207822953221
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790275901935663719}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.39555076, y: 0.5907164}
+  serializedVersion: 2
+  m_Radius: 0.1867495

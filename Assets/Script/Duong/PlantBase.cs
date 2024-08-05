@@ -16,9 +16,13 @@ public class PlantBase : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     protected void Update()
     {
         
+    }
+    public void TakeDamage(float amount)
+    {
+        health -= amount;
+        if (health < 0) health = 0;
     }
 }

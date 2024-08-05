@@ -1,10 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Chomper : PlantBase
 {
-    [SerializeField] private float eatDuration;
+    [SerializeField] private float eatDuration = 10f;
     private bool isEating = false;
 
     private void Start()
@@ -14,25 +14,20 @@ public class Chomper : PlantBase
 
     private void Update()
     {
-
-    }
-
-    private void OnTriggerStay2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Zombies") && !isEating)
+        if (health <= 0)
         {
-            StartCoroutine(EatZombie(collider.gameObject));
+            Destroy(gameObject);
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Zombies") && isEating == true)
+        if (collider.CompareTag("Zombies"))
         {
-            health -= 1;
-            if (health <= 0)
+            // Nếu đang ăn, không thực hiện thêm hành động
+            if (!isEating)
             {
-                Destroy(gameObject);
+                StartCoroutine(EatZombie(collider.gameObject));
             }
         }
     }
@@ -54,5 +49,13 @@ public class Chomper : PlantBase
         isEating = false;
 
         animator.SetTrigger("Idle");
+    }
+
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Zombies") && collider.GetComponent<CircleCollider2D>().enabled)
+        {
+            TakeDamage(100);
+        }
     }
 }
