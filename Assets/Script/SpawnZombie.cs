@@ -27,7 +27,7 @@ public class SpawnZombie : MonoBehaviour
             if (!notification.hasShown && currentGameTime >= notification.showTime)
             {
                 // In ra thông báo
-                Debug.Log(notification.message);
+                //Debug.Log(notification.message);
 
                 // Chọn một điểm spawn ngẫu nhiên
                 int randomIndex = Random.Range(0, spawnPoints.Count);

@@ -23,7 +23,7 @@ public class PeaShooter : PlantBase
     private AudioSource audioSource; // Nguồn âm thanh
 
     // Hàm khởi tạo ban đầu
-    void Start()
+     protected override void Start()
     {
         base.Start(); // Gọi hàm Start của lớp cha
         canFire = 0; // Khởi tạo thời gian bắn bằng 0
@@ -32,7 +32,7 @@ public class PeaShooter : PlantBase
     }
 
     // Hàm cập nhật hàng khung hình
-    void Update()
+    protected override void Update()
     {
         base.Update(); // Gọi hàm Update của lớp cha
         Attack(); // Gọi hàm Attack để kiểm tra và tấn công zombie
@@ -44,6 +44,7 @@ public class PeaShooter : PlantBase
         // Kiểm tra xem có zombie trong vùng tấn công không
         if (ZombiesDetected().collider != null)
         {
+            Debug.Log(ZombiesDetected().collider.name);
             animator.SetBool("check", true); // Đặt biến check của animator thành true nếu phát hiện zombie
         }
         else

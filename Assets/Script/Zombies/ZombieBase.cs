@@ -10,20 +10,43 @@ public class ZombieBase : MonoBehaviour
     protected Animator animator;
     protected SpriteRenderer sr;
 
+    [SerializeField] protected AudioClip hitByBullet;
+    [SerializeField] protected AudioClip audioAtk;
+    protected AudioSource AudioSource;
+
     protected bool canMove = false;
     protected bool checkCollision = false;
     
     private PlantBase plantBase;
-    protected void Start()
+    protected virtual void Start()
     {
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        AudioSource = GetComponent<AudioSource>();
         plantBase = FindObjectOfType<PlantBase>(); // Tìm PlantBase trong toàn cảnh
 
         if (plantBase == null)
         {
-            Debug.Log("plantBase null");
+            //Debug.Log("plantBase null");
         }
+    }
+    protected virtual void Update()
+    {
+        if (canMove == true)
+        {
+            moving(speed);
+        }
+
+        if (health <= 0)
+        {
+            Death();
+        }
+    }
+
+    protected virtual void Death()
+    {
+        GamePlay.instance.deadZombies++;
+        Destroy(gameObject);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
@@ -65,6 +88,7 @@ public class ZombieBase : MonoBehaviour
         {
             Debug.Log("Đang tấn công plantBase.");
             plantBase.takeDame(Atk);
+            AudioSource.PlayOneShot(audioAtk);
         }
         else
         {
@@ -80,14 +104,7 @@ public class ZombieBase : MonoBehaviour
     {
         canMove = false;
     }
-    protected void Update()
-    {
-        if (canMove == true)
-        {
-            moving(speed);
-        }
-    }
-
+    //
     protected void moving(float x)
     {
         transform.Translate(Vector2.left * x * Time.deltaTime);

@@ -9,19 +9,16 @@ public class PlantBase : MonoBehaviour
     protected SpriteRenderer sr;
 
     
-    protected void Start()
+    protected virtual void Start()
     {
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        if (sr == null)
-        {
-            Debug.LogError("SpriteRenderer is not assigned. Please add a SpriteRenderer component to the GameObject.");
-        }
+        
     }
 
     // Update is called once per frame
-    protected void Update()
-    {
+    protected virtual void Update()
+    { 
         if(health <= 0)
         {
             Destroy(gameObject);

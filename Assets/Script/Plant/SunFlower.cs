@@ -5,13 +5,13 @@ public class SunFlower : PlantBase
     [SerializeField] private GameObject sun_Prefab;
     [SerializeField] private Transform posStop;
     
-    void Start()
+    protected override void Start()
     {
         base.Start();
         InvokeRepeating("spanwSun", 3, 4); // Hàm gọi methodName sau thời gian và sau đó sẽ lặp lại theo giây
     }
 
-    private void Update()
+    protected override void Update()
     {
         base.Update();
     }

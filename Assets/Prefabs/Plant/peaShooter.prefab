@@ -293,7 +293,7 @@ MonoBehaviour:
   health: 0.02
   whatIsMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   distanceLimit: 17.6
   bullet_prefabs: {fileID: 3308974078799076085, guid: b7d3ca254da4b0743babe1677167ec22, type: 3}
   pos_Shoot: {fileID: 7392933453226330485}
