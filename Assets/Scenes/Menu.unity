@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -1947,8 +1947,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1385948297}
   - component: {fileID: 1385948298}
+  - component: {fileID: 1385948299}
   m_Layer: 5
-  m_Name: ScoreLine
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2002,6 +2003,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1385948299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385948296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2143121fe3a4e5b4ea11a82ae99ee710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankTxt: {fileID: 1211501390}
+  nameTxt: {fileID: 1516927856}
+  TimeTxt: {fileID: 413964781}
 --- !u!1 &1516927854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,6 +2927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2001880365}
+  - component: {fileID: 2001880366}
   m_Layer: 5
   m_Name: UI HighScore
   m_TagString: Untagged
@@ -2939,6 +2956,19 @@ RectTransform:
   m_AnchoredPosition: {x: 5, y: 1.6799927}
   m_SizeDelta: {x: -10.189941, y: -6.5200195}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2001880366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001880364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060f83ac7ed3bd9458dbccc138c03c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreContents: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
