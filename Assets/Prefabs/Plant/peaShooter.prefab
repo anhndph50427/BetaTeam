@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bdd52ce4c2014409c95cc12b6fe08e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0.02
+  health: 300
   whatIsMask:
     serializedVersion: 2
     m_Bits: 8

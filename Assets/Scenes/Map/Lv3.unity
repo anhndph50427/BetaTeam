@@ -326,6 +326,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5830994707694622510, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: m_text
+      value: Level 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6949256621585657372, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: sunScore
       value: 500

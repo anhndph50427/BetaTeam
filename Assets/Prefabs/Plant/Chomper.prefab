@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2e83f2e2e7d9d4cb2d3f713b21a8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   eatDuration: 10
 --- !u!1 &3028736771409056486
 GameObject:
