@@ -962,7 +962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 228.67332, y: -61.305}
+  m_AnchoredPosition: {x: 228.67334, y: -61.305}
   m_SizeDelta: {x: 457.34665, y: 122.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156168957
@@ -4055,7 +4055,7 @@ MonoBehaviour:
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
-  sceneToLoad: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+  sceneToLoad: {fileID: 102900000, guid: 86d7a8fa0c331d84db52e336b9b2dc8b, type: 3}
 --- !u!114 &964526447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4549,7 +4549,7 @@ MonoBehaviour:
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
-  sceneToLoad: {fileID: 0}
+  sceneToLoad: {fileID: 102900000, guid: 02d14c31aa830f34ca3c56a36afa5dc1, type: 3}
 --- !u!114 &1125815110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4725,7 +4725,7 @@ MonoBehaviour:
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
-  sceneToLoad: {fileID: 0}
+  sceneToLoad: {fileID: 102900000, guid: ffc357f19b1d7794485620269cbddacc, type: 3}
 --- !u!114 &1218161614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4946,7 +4946,7 @@ MonoBehaviour:
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
-  sceneToLoad: {fileID: 0}
+  sceneToLoad: {fileID: 102900000, guid: 1cf4cf617eb49014fb5a71621075599c, type: 3}
 --- !u!114 &1308789135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5794,7 +5794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 208.49336, y: -306.62}
+  m_AnchoredPosition: {x: 208.49335, y: -306.62}
   m_SizeDelta: {x: 416.98672, y: 613.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663458210
@@ -5947,7 +5947,7 @@ MonoBehaviour:
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
-  sceneToLoad: {fileID: 0}
+  sceneToLoad: {fileID: 102900000, guid: cea8dc6b3bf55eb448f5b99ff39a9591, type: 3}
 --- !u!114 &1684266958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6620,7 +6620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 689.7351, y: -56.62001}
+  m_AnchoredPosition: {x: 689.7351, y: -56.620026}
   m_SizeDelta: {x: 1379.4702, y: 113.24002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012984348
