@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class LoginAccount : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField userName;
+    public TMP_InputField userName;
     [SerializeField] private TMP_InputField password;
     [SerializeField] private TextMeshProUGUI notification;
 
