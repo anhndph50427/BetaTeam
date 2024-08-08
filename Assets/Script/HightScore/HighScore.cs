@@ -11,8 +11,7 @@ public class HighScore : MonoBehaviour
     public GameObject scoreObj;
     private void Start()
     {
-        StartCoroutine(GetHightScore());
-        
+        StartCoroutine(GetHightScore());       
     }
 
 
