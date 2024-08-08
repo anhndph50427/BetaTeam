@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 103ba55a18fb9a743bf241f0ebca6e8c
+guid: 0dad2d88d7f18fc4e8558aa4ad7a3213
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 900px-PVZMobile_old_mainmenu_sprites1_0
+      name: "Khi\xEAn zombie_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 406
-        width: 226
-        height: 56
+        x: 114
+        y: 211
+        width: 303
+        height: 614
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e84fa1a5b884bf04a93dfbed267bc89f
-      internalID: 1778001477
+      spriteID: fb30648105066944caefff3073ce5015
+      internalID: 1726197912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Khi\xEAn zombie_1"
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 251
+        width: 257
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c916536f69b3e50488af921a7271c6a2
+      internalID: -24812715
       vertices: []
       indices: 
       edges: []
@@ -128,7 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      900px-PVZMobile_old_mainmenu_sprites1_0: 1778001477
+      "Khi\xEAn zombie_0": 1726197912
+      "Khi\xEAn zombie_1": -24812715
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
