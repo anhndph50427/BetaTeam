@@ -1,6 +1,7 @@
 ﻿
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlassSkill : MonoBehaviour
 {
@@ -14,16 +15,40 @@ public class GlassSkill : MonoBehaviour
     public Vector2 SizeBox;
     public LayerMask whatIsLayerMask;
 
+    public Button ActiveSkill;
+
+    private void Start()
+    {
+        ActiveSkill = GameObject.Find("GlassSkillBtn").GetComponent<Button>();
+        ActiveSkill.onClick.AddListener(() => onButton());
+    }
+
 
     private void Update()
     {
         CoolDownTimer -= Time.deltaTime;
-        if(Input.GetKeyDown(KeyCode.Space) && CoolDownTimer < 0)
+        //if (Input.GetKeyDown(KeyCode.Space) && CoolDownTimer < 0)
+        //{
+        //    Debug.Log("is CoolDown");
+        //    CoolDownTimer = CoolDown;
+        //    isOnSkill = true;
+        //}
+
+        if(CoolDownTimer < 0)
         {
-            Debug.Log("is CoolDown");
-            CoolDownTimer = CoolDown;
-            isOnSkill = true;
+            ActiveSkill.interactable = true;
         }
+        else
+        {
+            ActiveSkill.interactable = false;
+        }
+    }
+
+    private void onButton()
+    {
+        Debug.Log("is CoolDown");
+        CoolDownTimer = CoolDown;
+        isOnSkill = true;
     }
 
     private void FixedUpdate()
@@ -38,7 +63,7 @@ public class GlassSkill : MonoBehaviour
     void checkEnemy()
     {
         RaycastHit2D[] hit = Physics2D.BoxCastAll(transform.position, SizeBox, 0, Vector2.down, whatIsLayerMask);
-        foreach(var colision in hit)
+        foreach (var colision in hit)
         {
             if (colision.collider != null)
             {
@@ -50,8 +75,7 @@ public class GlassSkill : MonoBehaviour
     IEnumerator FreezeEnemy(GameObject target)
     {
         ZombieBase Enemy = target.GetComponent<ZombieBase>();
-
-        if(Enemy != null)
+        if (Enemy != null)
         {
             Debug.Log("Enemy no movement");
             Enemy.canMove = false;
@@ -64,6 +88,6 @@ public class GlassSkill : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position , new Vector3(SizeBox.x , SizeBox.y , 0));
+        Gizmos.DrawWireCube(transform.position, new Vector3(SizeBox.x, SizeBox.y, 0));
     }
 }
