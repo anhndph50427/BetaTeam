@@ -14,7 +14,7 @@ public class ZombieBase : MonoBehaviour
     [SerializeField] protected AudioClip audioAtk;
     protected AudioSource AudioSource;
 
-    protected bool canMove = false;
+    public bool canMove = false;
     protected bool checkCollision = false;
     
     private PlantBase plantBase;
@@ -105,7 +105,7 @@ public class ZombieBase : MonoBehaviour
         canMove = false;
     }
     //
-    protected void moving(float x)
+    public void moving(float x)
     {
         transform.Translate(Vector2.left * x * Time.deltaTime);
     }
