@@ -6,11 +6,18 @@ public class LawnMower : MonoBehaviour
 {
     public float speed;
     private bool isActivated = false;
+    public AudioClip sound;
+    private AudioSource audioSource;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (isActivated)
         {
+            
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
     }
@@ -20,7 +27,9 @@ public class LawnMower : MonoBehaviour
         if (collision.gameObject.CompareTag("Zombies"))
         {
             isActivated = true;
-            Destroy(collision.gameObject);
+            audioSource.PlayOneShot(sound);
+            ZombieBase zombie = collision.gameObject.GetComponent<ZombieBase>();
+            zombie.takeDame(1800f);
             Destroy(gameObject, 4f);
         }
     }

@@ -7,9 +7,13 @@ public class Chomper : PlantBase
     [SerializeField] private float eatDuration = 10f;
     private bool isEating = false;
 
+    public AudioClip sound;
+    private AudioSource audioSource;
+
     protected override void Start()
     {
         base.Start();
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected override void Update()
@@ -17,13 +21,17 @@ public class Chomper : PlantBase
         base.Update();
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collider.CompareTag("Zombies") && !isEating)
+        if (collision.CompareTag("Zombies") && !isEating)
         {
-            StartCoroutine(EatZombie(collider.gameObject));
+            StartCoroutine(EatZombie(collision.gameObject));
         }
     }
+
+    
+    
 
     private IEnumerator EatZombie(GameObject zombie)
     {
@@ -33,7 +41,8 @@ public class Chomper : PlantBase
 
         yield return new WaitForSeconds(0.5f);
 
-        Destroy(zombie);
+        ZombieBase zombieBase = zombie.GetComponent<ZombieBase>();
+        zombieBase.takeDame(1800f);
 
         animator.SetTrigger("Eat");
 
@@ -44,11 +53,11 @@ public class Chomper : PlantBase
         animator.SetTrigger("Idle");
     }
 
-    private void OnTriggerStay2D(Collider2D collider)
+    /*private void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.CompareTag("Zombies") && collider.GetComponent<CircleCollider2D>().enabled)
         {
             //TakeDamage(100);
         }
-    }
+    }*/
 }

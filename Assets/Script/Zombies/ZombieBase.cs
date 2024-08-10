@@ -16,7 +16,7 @@ public class ZombieBase : MonoBehaviour
 
     public bool canMove = false;
     protected bool checkCollision = false;
-    
+
     private PlantBase plantBase;
     protected virtual void Start()
     {
@@ -24,7 +24,6 @@ public class ZombieBase : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         AudioSource = GetComponent<AudioSource>();
         plantBase = FindObjectOfType<PlantBase>(); // Tìm PlantBase trong toàn cảnh
-
         if (plantBase == null)
         {
             //Debug.Log("plantBase null");
@@ -46,7 +45,8 @@ public class ZombieBase : MonoBehaviour
     protected virtual void Death()
     {
         GamePlay.instance.deadZombies++;
-        Destroy(gameObject);
+        //animator.SetBool("CheckDeath", true);
+        Destroy(gameObject/*, 1.5f*/);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)

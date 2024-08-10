@@ -38,12 +38,4 @@ public class SliderController : MonoBehaviour
             }
         }
     }
-
-
-    // Phương thức để đặt lại thời gian (nếu cần)
-    public void ResetTimer()
-    {
-        currentTime = maxTime;
-        slider.value = currentTime;
-    }
 }
