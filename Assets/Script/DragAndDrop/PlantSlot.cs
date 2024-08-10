@@ -73,16 +73,30 @@ public class PlantSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!buyPlant()) return;
+        
 
         Object_Card.gameObject.SetActive(false);
         Object_Card.rectTransform.anchoredPosition = Pos;
         canvasGroup.blocksRaycasts = true;
-        GamePlay.instance.sunScore -= price;
-        CoolDownTimer = CoolDown; 
+        //GamePlay.instance.sunScore -= price;
+        //CoolDownTimer = CoolDown; 
 
 
-        DropObjectCurrent.objectCurrent = null;
+        //DropObjectCurrent.objectCurrent = null;
+
+
+        if (buyPlant())
+        {
+            GamePlay.instance.sunScore -= price;
+            CoolDownTimer = CoolDown;
+
+
+            DropObjectCurrent.objectCurrent = null;
+        }
+        else
+        {
+            return;
+        }
     }
 
 

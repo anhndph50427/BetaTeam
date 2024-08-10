@@ -252,6 +252,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 1283391958}
   targetGameobj_2: {fileID: 1988719822}
   sceneToLoad: {fileID: 0}
+  isStopStart: 0
 --- !u!114 &96566612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +410,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 1633320142}
   targetGameobj_2: {fileID: 1988719822}
   sceneToLoad: {fileID: 0}
+  isStopStart: 0
 --- !u!114 &285398679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500.67908, y: -34.1}
+  m_AnchoredPosition: {x: 500.67908, y: -34.09999}
   m_SizeDelta: {x: 1001.35815, y: 68.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512992228
@@ -777,7 +779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500.67908, y: -81.83123}
+  m_AnchoredPosition: {x: 500.67908, y: -81.83122}
   m_SizeDelta: {x: 1001.35815, y: 21.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666690390
@@ -867,6 +869,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 1283391958}
   targetGameobj_2: {fileID: 1988719822}
   sceneToLoad: {fileID: 0}
+  isStopStart: 0
 --- !u!114 &717675947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,6 +1172,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
   sceneToLoad: {fileID: 102900000, guid: 86d7a8fa0c331d84db52e336b9b2dc8b, type: 3}
+  isStopStart: 0
 --- !u!114 &964526447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1265,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
   sceneToLoad: {fileID: 102900000, guid: 02d14c31aa830f34ca3c56a36afa5dc1, type: 3}
+  isStopStart: 0
 --- !u!114 &1125815110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,6 +1358,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
   sceneToLoad: {fileID: 102900000, guid: ffc357f19b1d7794485620269cbddacc, type: 3}
+  isStopStart: 0
 --- !u!114 &1218161614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,6 +1435,63 @@ Transform:
   - {fileID: 1684266956}
   m_Father: {fileID: 538528509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1289456749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177541706303256626, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559608485652398365, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab5adf98be3db914f9e46e5d5df0dfa7, type: 3}
 --- !u!1 &1308789132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1546,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
   sceneToLoad: {fileID: 102900000, guid: 1cf4cf617eb49014fb5a71621075599c, type: 3}
+  isStopStart: 0
 --- !u!114 &1308789135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1639,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 2001880364}
   targetGameobj_2: {fileID: 1988719822}
   sceneToLoad: {fileID: 0}
+  isStopStart: 0
 --- !u!114 &1319224622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,6 +2409,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 2001880364}
   targetGameobj_2: {fileID: 1988719822}
   sceneToLoad: {fileID: 0}
+  isStopStart: 0
 --- !u!114 &1635815579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,6 +2586,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 0}
   sceneToLoad: {fileID: 102900000, guid: cea8dc6b3bf55eb448f5b99ff39a9591, type: 3}
+  isStopStart: 0
 --- !u!114 &1684266958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2612,6 +2679,7 @@ MonoBehaviour:
   targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 1988719822}
   sceneToLoad: {fileID: 0}
+  isStopStart: 0
 --- !u!114 &1808647403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,3 +2887,4 @@ SceneRoots:
   - {fileID: 1656208112}
   - {fileID: 538528509}
   - {fileID: 1975898732}
+  - {fileID: 1289456749}
