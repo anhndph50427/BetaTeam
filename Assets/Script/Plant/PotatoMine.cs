@@ -12,8 +12,12 @@ public class PotatoMine : PlantBase
 
     public BoxCollider2D boxColliderOnEnable;
 
+    public AudioClip sound;
+    private AudioSource audioSource;
+
     protected override void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         base.Start();
 
         // Gọi hàm Sprout sau khi hết thời gian sproutTime
@@ -38,6 +42,7 @@ public class PotatoMine : PlantBase
         if (collider.CompareTag("Zombies") && isSprouted)
         {
             animator.SetTrigger("ATK");
+            audioSource.PlayOneShot(sound);
             ZombieBase zom = collider.GetComponent<ZombieBase>();
             if (zom != null)
             {

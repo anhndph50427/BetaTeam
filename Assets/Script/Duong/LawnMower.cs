@@ -11,14 +11,12 @@ public class LawnMower : MonoBehaviour
 
     private void Start()
     {
-        speed = GameManager.Instance.mowerSO.infor[PlayerPrefs.GetInt("IndexMower")].reduceSpeed;
         audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
         if (isActivated)
         {
-            
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
     }

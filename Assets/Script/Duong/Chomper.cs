@@ -38,9 +38,9 @@ public class Chomper : PlantBase
         isEating = true;
 
         animator.SetTrigger("PreparingToEat");
+        audioSource.PlayOneShot(sound);
 
         yield return new WaitForSeconds(0.5f);
-
         ZombieBase zombieBase = zombie.GetComponent<ZombieBase>();
         zombieBase.takeDame(1800f);
 

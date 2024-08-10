@@ -243,6 +243,7 @@ MonoBehaviour:
   health: 300
   sproutTime: 5
   boxColliderOnEnable: {fileID: 29439735758561625}
+  sound: {fileID: 8300000, guid: de356c8bae6eab147a8d6211c7d3ba67, type: 3}
 --- !u!1 &3839359715789195285
 GameObject:
   m_ObjectHideFlags: 0

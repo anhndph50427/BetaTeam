@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SliderController : MonoBehaviour
 {
-    public Slider slider;           
+    public Slider slider;
+    public TextMeshProUGUI GameTime;
     public float maxTime = 10f;     // Thời gian tối đa (giây)
     private float currentTime;      // Thời gian hiện tại
+   
 
     void Start()
     {
+        
         if (slider == null)
         {
             Debug.LogError("Slider chưa được gán");
@@ -24,6 +28,11 @@ public class SliderController : MonoBehaviour
     void Update()
     {
         currentTime = GamePlay.GameTime;
+
+        if (GameTime != null)
+        {
+            GameTime.text = Mathf.RoundToInt(currentTime).ToString() + "s";
+        }
         if (currentTime > 0)
         {
             // Giảm thời gian hiện tại dựa trên thời gian thực của game
