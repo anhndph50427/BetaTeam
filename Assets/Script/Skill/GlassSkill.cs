@@ -11,6 +11,7 @@ public class GlassSkill : MonoBehaviour
     public float CoolDownTimer;
     public float EffectDuration;
     public bool isOnSkill;
+    private int curentIndex;
 
     [Header("Colision info")]
     public Vector2 SizeBox;
@@ -26,9 +27,10 @@ public class GlassSkill : MonoBehaviour
         ActiveSkill.onClick.AddListener(() => onButton());
         CoolDownText.text = CoolDownTimer.ToString("n0");
         sr = GetComponent<SpriteRenderer>();
+        curentIndex = PlayerPrefs.GetInt("slowlyLevel");
 
-
-        EffectDuration = GameManager.Instance.Slowly.infor[PlayerPrefs.GetInt("indexLevel")].TimeStopMove;
+        EffectDuration = GameManager.Instance.Slowly.infor[curentIndex].TimeStopMove;
+        
     }
 
 
@@ -51,7 +53,7 @@ public class GlassSkill : MonoBehaviour
     private void onButton()
     {
         Debug.Log("is CoolDown");
-        CoolDownTimer = GameManager.Instance.Slowly.infor[PlayerPrefs.GetInt("indexLevel")].coolDown;
+        CoolDownTimer = GameManager.Instance.Slowly.infor[curentIndex].coolDown;
         isOnSkill = true;
     }
 

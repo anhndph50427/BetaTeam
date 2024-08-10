@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Net;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,6 +15,11 @@ public class PlantSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [SerializeField] private GameObject Plant_Object; // Object để sinh ra khi thả
     [SerializeField] private Image Object_Card;
 
+    [Header("CoolDown and Price")]
+    [SerializeField] private float CoolDownTimer;
+    [SerializeField] private float CoolDown;
+    [SerializeField] private TextMeshProUGUI CoolDownText;
+
 
     [SerializeField] int price;
     [SerializeField] TextMeshProUGUI TextPrice;
@@ -24,7 +30,28 @@ public class PlantSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             TextPrice.text = price.ToString();
         }
+
+        if(CoolDownText != null)
+        {
+            CoolDownText.text = CoolDownTimer.ToString("F2");
+        }
     }
+
+    private void Update()
+    {
+        CoolDownTimer -= Time.deltaTime;
+        CoolDownText.text = CoolDownTimer.ToString("F2");
+        if(CoolDownTimer > 0)
+        {
+            CoolDownText.enabled = true;
+        }
+        else
+        {
+            CoolDownText.enabled = false;
+        }
+    }
+
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if(!buyPlant()) return;
@@ -52,6 +79,8 @@ public class PlantSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Object_Card.rectTransform.anchoredPosition = Pos;
         canvasGroup.blocksRaycasts = true;
         GamePlay.instance.sunScore -= price;
+        CoolDownTimer = CoolDown; 
+
 
         DropObjectCurrent.objectCurrent = null;
     }
@@ -59,7 +88,7 @@ public class PlantSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     bool buyPlant()
     {
-        if(GamePlay.instance.sunScore >= price)
+        if(GamePlay.instance.sunScore >= price && CoolDownTimer < 0)
         {
             return true;
         }

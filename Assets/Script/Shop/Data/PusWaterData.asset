@@ -17,11 +17,11 @@ MonoBehaviour:
   indextLevel: 0
   infor:
   - coolDonw: 20
-    force: {x: 5, y: 5}
+    force: {x: 5, y: 0}
     UnlockCost: 50
   - coolDonw: 15
-    force: {x: 10, y: 10}
+    force: {x: 10, y: 0}
     UnlockCost: 100
   - coolDonw: 10
-    force: {x: 15, y: 15}
+    force: {x: 15, y: 0}
     UnlockCost: 150

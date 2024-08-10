@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class SlowlyItem : MonoBehaviour
 {
     [SerializeField] private SlowlySO Slowly;
-    [SerializeField] private int currentIndex;
+    [SerializeField] private int IndexSlowly;
+    [SerializeField] private int slowlyLevel;
 
     [Header("UI Text")]
     [SerializeField] private TextMeshProUGUI nameTxt;
@@ -17,26 +18,32 @@ public class SlowlyItem : MonoBehaviour
 
     private void Start()
     {
-        currentIndex = Slowly.indexLevel;
+        IndexSlowly = Slowly.indexLevel;
         loadAtribute();
 
         UpgrateBtn.onClick.AddListener(() => Upgrate());
+        slowlyLevel = PlayerPrefs.GetInt("IndexSlowly");
+    }
+
+    private void Update()
+    {
+        PlayerPrefs.SetInt("IndexSlowly", IndexSlowly);
     }
 
     void loadAtribute()
     {
         nameTxt.text = Slowly.nameSkill;
-        levelTxt.text = $"{currentIndex + 1}";
-        coolDownTxt.text = Slowly.infor[currentIndex].coolDown.ToString();
-        pointTxt.text = Slowly.infor[currentIndex].TimeStopMove.ToString();
-        unlockCostTxt.text = Slowly.infor[currentIndex].UnlockCost.ToString();
+        levelTxt.text = $"{slowlyLevel + 1}";
+        coolDownTxt.text = Slowly.infor[slowlyLevel].coolDown.ToString();
+        pointTxt.text = Slowly.infor[slowlyLevel].TimeStopMove.ToString();
+        unlockCostTxt.text = Slowly.infor[slowlyLevel].UnlockCost.ToString();
     }
 
     void Upgrate()
     {
 
-        currentIndex++;
+        slowlyLevel++;
         loadAtribute();
-        if (currentIndex == Slowly.infor.Length - 1) UpgrateBtn.interactable = false;
+        if (slowlyLevel == Slowly.infor.Length - 1) UpgrateBtn.interactable = false;
     }
 }

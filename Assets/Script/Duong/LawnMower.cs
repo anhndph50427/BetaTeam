@@ -11,6 +11,7 @@ public class LawnMower : MonoBehaviour
 
     private void Start()
     {
+        speed = GameManager.Instance.mowerSO.infor[PlayerPrefs.GetInt("IndexMower")].reduceSpeed;
         audioSource = GetComponent<AudioSource>();
     }
     private void Update()

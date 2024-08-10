@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class MowerItem : MonoBehaviour
 {
     [SerializeField] private MowerSO mower;
-    [SerializeField] private int currentIndex;
+    [SerializeField] private int IndexMower;
+    [SerializeField] private int CountIndex;
 
     [Header("UI Text")]
     [SerializeField] private TextMeshProUGUI nameTxt;
@@ -17,27 +18,36 @@ public class MowerItem : MonoBehaviour
 
     private void Start()
     {
-        currentIndex = mower.indexLevel;
+        IndexMower = mower.indexLevel;
+        PlayerPrefs.SetInt("IndexMower", IndexMower);
+        Debug.Log(PlayerPrefs.GetInt("IndexMower"));
+
+        CountIndex = PlayerPrefs.GetInt("IndexMower");
         loadAtribute();
 
         UpgrateBtn.onClick.AddListener(() => Upgrate());
 
     }
 
+    private void Update()
+    {
+        PlayerPrefs.SetInt("IndexMower", IndexMower);
+    }
+
     void loadAtribute()
     {
         nameTxt.text = mower.nameSkill;
-        levelTxt.text = $"{currentIndex + 1}";
-        coolDownTxt.text = mower.infor[currentIndex].coolDown.ToString();
-        pointTxt.text = mower.infor[currentIndex].reduceSpeed.ToString();
-        unlockCostTxt.text = mower.infor[currentIndex].UnlockCost.ToString();
+        levelTxt.text = $"{CountIndex + 1}";
+        coolDownTxt.text = mower.infor[CountIndex].coolDown.ToString();
+        pointTxt.text = mower.infor[CountIndex].reduceSpeed.ToString();
+        unlockCostTxt.text = mower.infor[CountIndex].UnlockCost.ToString();
     }
 
     void Upgrate()
     {
-        currentIndex++;
+        CountIndex++;
 
         loadAtribute();
-        if (currentIndex == mower.infor.Length - 1) UpgrateBtn.interactable = false;
+        if (CountIndex == mower.infor.Length - 1) UpgrateBtn.interactable = false;
     }
 }

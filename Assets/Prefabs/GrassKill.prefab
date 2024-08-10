@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877e43a71b59b0e4d889035646b10ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDown: 20
+  CoolDown: 0
   CoolDownTimer: 0
   EffectDuration: 10
   isOnSkill: 0

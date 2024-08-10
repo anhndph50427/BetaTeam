@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public PushWaterSO PushWater;
+    public MowerSO mowerSO;
     public SlowlySO Slowly;
 
     private void Awake()
