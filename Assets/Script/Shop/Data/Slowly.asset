@@ -17,11 +17,11 @@ MonoBehaviour:
   indexLevel: 0
   infor:
   - coolDown: 40
-    speed: 10
+    TimeStopMove: 3
     UnlockCost: 100
   - coolDown: 35
-    speed: 8
+    TimeStopMove: 5
     UnlockCost: 200
   - coolDown: 25
-    speed: 5
+    TimeStopMove: 10
     UnlockCost: 300

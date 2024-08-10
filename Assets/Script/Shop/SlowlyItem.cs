@@ -28,7 +28,7 @@ public class SlowlyItem : MonoBehaviour
         nameTxt.text = Slowly.nameSkill;
         levelTxt.text = $"{currentIndex + 1}";
         coolDownTxt.text = Slowly.infor[currentIndex].coolDown.ToString();
-        pointTxt.text = Slowly.infor[currentIndex].speed.ToString();
+        pointTxt.text = Slowly.infor[currentIndex].TimeStopMove.ToString();
         unlockCostTxt.text = Slowly.infor[currentIndex].UnlockCost.ToString();
     }
 

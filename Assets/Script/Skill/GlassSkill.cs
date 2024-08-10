@@ -1,5 +1,6 @@
 ﻿
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,31 +16,34 @@ public class GlassSkill : MonoBehaviour
     public Vector2 SizeBox;
     public LayerMask whatIsLayerMask;
 
+    [Header("UI")]
     public Button ActiveSkill;
-
+    public TextMeshProUGUI CoolDownText;
+    private SpriteRenderer sr;
     private void Start()
     {
-        ActiveSkill = GameObject.Find("GlassSkillBtn").GetComponent<Button>();
+        ActiveSkill = GameObject.Find("GrassSkillBtn").GetComponent<Button>();
         ActiveSkill.onClick.AddListener(() => onButton());
+        CoolDownText.text = CoolDownTimer.ToString("n0");
+        sr = GetComponent<SpriteRenderer>();
+
+
+        EffectDuration = GameManager.Instance.Slowly.infor[PlayerPrefs.GetInt("indexLevel")].TimeStopMove;
     }
 
 
     private void Update()
     {
         CoolDownTimer -= Time.deltaTime;
-        //if (Input.GetKeyDown(KeyCode.Space) && CoolDownTimer < 0)
-        //{
-        //    Debug.Log("is CoolDown");
-        //    CoolDownTimer = CoolDown;
-        //    isOnSkill = true;
-        //}
-
         if(CoolDownTimer < 0)
         {
             ActiveSkill.interactable = true;
+            CoolDownText.gameObject.SetActive(false);
         }
         else
         {
+            CoolDownText.gameObject.SetActive(true);
+            CoolDownText.text = CoolDownTimer.ToString("n0");
             ActiveSkill.interactable = false;
         }
     }
@@ -47,7 +51,7 @@ public class GlassSkill : MonoBehaviour
     private void onButton()
     {
         Debug.Log("is CoolDown");
-        CoolDownTimer = CoolDown;
+        CoolDownTimer = GameManager.Instance.Slowly.infor[PlayerPrefs.GetInt("indexLevel")].coolDown;
         isOnSkill = true;
     }
 
@@ -68,6 +72,10 @@ public class GlassSkill : MonoBehaviour
             if (colision.collider != null)
             {
                 StartCoroutine(FreezeEnemy(colision.collider.gameObject));
+            }
+            else
+            {
+                return;
             }
         }
     }

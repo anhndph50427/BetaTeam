@@ -19,8 +19,11 @@ public class PlantSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     [SerializeField] TextMeshProUGUI TextPrice;
 
     private void Start()
-    {
-        TextPrice.text = price.ToString();
+    {  
+        if(TextPrice != null)
+        {
+            TextPrice.text = price.ToString();
+        }
     }
     public void OnBeginDrag(PointerEventData eventData)
     {

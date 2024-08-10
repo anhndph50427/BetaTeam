@@ -7,17 +7,20 @@ public class PushWaterSkill : MonoBehaviour
     {
         if (collision.CompareTag("Zombies"))
         {
+            Debug.Log("Touch");
             Vector2 dir = ((collision.transform.position - transform.position)).normalized;
             StartCoroutine(Force(collision.gameObject , dir));
         }
+
+        //Destroy(gameObject, 2f);
     }
 
 
     IEnumerator Force(GameObject target , Vector2 dir)
     {
         Rigidbody2D rb = target.GetComponent<Rigidbody2D>();
-        rb.AddForce(dir , ForceMode2D.Impulse);
-        yield return new WaitForSeconds(1f);
+        rb.AddForce(dir * 5, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(2f);
         rb.velocity = Vector2.zero;    
     }
 }

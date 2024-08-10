@@ -13,6 +13,6 @@ public class SlowlySO : SkillBaseSO
 public class SlowlyAtribute
 {
     public float coolDown;
-    public float speed;
+    public float TimeStopMove;
     public int UnlockCost;
 }
