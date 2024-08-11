@@ -8,17 +8,25 @@ public class GameManager : MonoBehaviour
     public PushWaterSO PushWater;
     public MowerSO mowerSO;
     public SlowlySO Slowly;
+    public string namePlayer;
 
     private void Awake()
     {
         if(Instance != null)
         {
-            DestroyImmediate(Instance);
+            DestroyImmediate(this.gameObject);
         }
         else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
+        namePlayer = EnterNamePlayer.namePlayer;
+    }
+
+    private void Update()
+    {
+        namePlayer = EnterNamePlayer.namePlayer;
     }
 }

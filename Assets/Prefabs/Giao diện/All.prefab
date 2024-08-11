@@ -5578,8 +5578,9 @@ MonoBehaviour:
     m_Bits: 64
   sunScore: 500
   SpawnZombiee: {fileID: 348594764363817782}
-  numberOfZombies: 0
+  numberOfZombies: 5
   deadZombies: 0
+  endGame: {fileID: 5816924840094950758}
 --- !u!82 &6174818022477385406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10020,11 +10021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3771737523106614286, guid: 52571404abdc9304097f80094254ecab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.72
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 3771737523106614286, guid: 52571404abdc9304097f80094254ecab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.38
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 3771737523106614286, guid: 52571404abdc9304097f80094254ecab, type: 3}
       propertyPath: m_LocalPosition.z

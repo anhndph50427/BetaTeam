@@ -10,14 +10,29 @@ public class UImanager : MonoBehaviour
     [Header("UI info")]
     [SerializeField] private Button Login;
     [SerializeField] private Button Register;
+    [SerializeField] private Button Back;
 
-    [Header("GameObjec")]
+    [Header("GameObjet")]
     [SerializeField] private GameObject LoginObj;
     [SerializeField] private GameObject RegisterObj;
     void Start()
     {
         Login.onClick.AddListener(() => login());
         Register.onClick.AddListener(() => Registers());
+        Back.onClick.AddListener(() => back());
+
+    }
+
+    private void Update()
+    {
+        if(parent.activeInHierarchy)
+        {
+            Back.gameObject.SetActive(false);
+        }
+        else
+        {
+            Back.gameObject.SetActive(true);
+        }
     }
 
     void login()
@@ -30,6 +45,13 @@ public class UImanager : MonoBehaviour
     {
         RegisterObj.SetActive(true);
         parent.SetActive(false);
+    }
+
+    void back()
+    {
+        parent.SetActive(true);
+        LoginObj.SetActive(false);
+        RegisterObj.SetActive(false);
     }
     
 }

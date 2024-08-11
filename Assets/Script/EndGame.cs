@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class EndGame : MonoBehaviour
 {
@@ -36,9 +37,40 @@ public class EndGame : MonoBehaviour
         if(MenuWin != null)
         {
             Time.timeScale = 0f;
+            StartCoroutine(InserScore());
             MenuWin.SetActive(true);
         }
         else Debug.Log("Menu Win Null");
 
     }
+
+    IEnumerator InserScore()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("token", PlayerPrefs.GetString("token"));
+        form.AddField("playerName", GameManager.Instance.namePlayer);
+        form.AddField("score", GamePlay.GameTime.ToString());
+
+        UnityWebRequest request = UnityWebRequest.Post("https://fpl.expvn.com/InsertHighscore.php", form);
+        yield return request.SendWebRequest();
+
+        if (!request.isDone)
+        {
+            Debug.Log("ERROR");
+        }
+        else
+        {
+            Debug.Log("Finish");
+            string get = request.downloadHandler.text;
+            if (get.Contains("Done"))
+            {
+                Debug.Log("Lưu dữ liệu thành công");
+            }
+            else if (get.Contains("Lỗi"))
+            {
+                Debug.Log("Không kết nối được sever");
+            }
+        }
+    }
+
 }
