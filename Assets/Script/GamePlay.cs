@@ -21,7 +21,7 @@ public class GamePlay : MonoBehaviour
     
     private AudioSource audioSource;
 
-
+    EndGame endGame;
     public static float GameTime { get; private set; }
 
     // Phương thức Awake được gọi khi script này được khởi tạo
@@ -58,7 +58,13 @@ public class GamePlay : MonoBehaviour
             }
         }
 
-        endGame();
+        if(numberOfZombies == deadZombies)
+        {
+            Debug.Log("Win Game !!!");
+            
+            endGame.winGame();
+
+        }
     }
     public void gamePaused()
     {
@@ -72,12 +78,5 @@ public class GamePlay : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    public void endGame()
-    {
-        if (deadZombies == numberOfZombies)
-        {
-
-            Debug.Log("Win Game!");
-        }
-    }
+    
 }

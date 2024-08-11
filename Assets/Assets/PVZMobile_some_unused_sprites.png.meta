@@ -289,10 +289,10 @@ TextureImporter:
       name: PVZMobile_some_unused_sprites_10
       rect:
         serializedVersion: 2
-        x: 157
+        x: 266
         y: 167
-        width: 220
-        height: 66
+        width: 111
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
