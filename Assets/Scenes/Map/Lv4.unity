@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[17].zombiePrefab
       value: 
-      objectReference: {fileID: 8634695116890735899, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
+      objectReference: {fileID: 1115366262091824679, guid: e829c1a498637284388631238e965ed0, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[18].zombiePrefab
       value: 
