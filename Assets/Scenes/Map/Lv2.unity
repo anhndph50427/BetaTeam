@@ -1665,6 +1665,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 
       objectReference: {fileID: 102900000, guid: ffc357f19b1d7794485620269cbddacc, type: 3}
+    - target: {fileID: 2822399922483039077, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3059069709211671929, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: CoolDownText
       value: 
@@ -1743,7 +1747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407368871195934517, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6413190780581616155, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.y
