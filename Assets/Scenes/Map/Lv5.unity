@@ -691,6 +691,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1651678545216969959, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: cea8dc6b3bf55eb448f5b99ff39a9591, type: 3}
     - target: {fileID: 1748247737591595407, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -763,6 +767,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2444904802378815663, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 72b0f98422add41469f1a6c15d52622a, type: 3}
     - target: {fileID: 3059069709211671929, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: CoolDownText
       value: 
@@ -819,6 +827,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4582405684793554782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: cea8dc6b3bf55eb448f5b99ff39a9591, type: 3}
     - target: {fileID: 5153882002661131752, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -843,6 +855,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523836937199664318, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: cea8dc6b3bf55eb448f5b99ff39a9591, type: 3}
     - target: {fileID: 8326931755984397381, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -710,6 +710,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1651678545216969959, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 72b0f98422add41469f1a6c15d52622a, type: 3}
     - target: {fileID: 1748247737591595407, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -838,6 +842,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4582405684793554782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 72b0f98422add41469f1a6c15d52622a, type: 3}
     - target: {fileID: 5830994707694622510, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_text
       value: Level 6
@@ -858,6 +866,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523836937199664318, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 72b0f98422add41469f1a6c15d52622a, type: 3}
     - target: {fileID: 8326931755984397381, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

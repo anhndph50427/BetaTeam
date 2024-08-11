@@ -1581,6 +1581,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -314.95
       objectReference: {fileID: 0}
+    - target: {fileID: 1651678545216969959, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 02d14c31aa830f34ca3c56a36afa5dc1, type: 3}
     - target: {fileID: 1748247737591595407, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1657,6 +1661,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2444904802378815663, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: ffc357f19b1d7794485620269cbddacc, type: 3}
     - target: {fileID: 3059069709211671929, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: CoolDownText
       value: 
@@ -1713,6 +1721,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4582405684793554782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 02d14c31aa830f34ca3c56a36afa5dc1, type: 3}
     - target: {fileID: 5153882002661131752, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1728,6 +1740,10 @@ PrefabInstance:
     - target: {fileID: 6045693131873937642, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407368871195934517, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6413190780581616155, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1745,6 +1761,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6523836937199664318, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 02d14c31aa830f34ca3c56a36afa5dc1, type: 3}
     - target: {fileID: 6719053558032974043, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_IsActive
       value: 0
