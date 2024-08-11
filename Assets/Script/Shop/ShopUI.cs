@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
+    public static ShopUI instance;
+    public TextMeshProUGUI CoinText;
     public GameObject[] target;
     public int Coins;
 
@@ -12,8 +15,16 @@ public class ShopUI : MonoBehaviour
     public Button PreviouBtn;
 
     public int selectIndex;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
+        CoinText.text = Coins.ToString();
+
         showGameObject(target[0]);
 
         if (selectIndex == target.Length - 1) NextBtn.interactable = false;
@@ -21,6 +32,11 @@ public class ShopUI : MonoBehaviour
 
         NextBtn.onClick.AddListener(() => Next());
         PreviouBtn.onClick.AddListener(() => Previous());
+    }
+
+    private void Update()
+    {
+        CoinText.text = Coins.ToString();
     }
 
     void showGameObject(GameObject obj)
