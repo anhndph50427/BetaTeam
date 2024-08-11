@@ -407,9 +407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.7735849, g: 0.751691, b: 0.751691, a: 1}
-  targetGameobj: {fileID: 1633320142}
+  targetGameobj: {fileID: 0}
   targetGameobj_2: {fileID: 1988719822}
-  sceneToLoad: {fileID: 0}
+  sceneToLoad: {fileID: 102900000, guid: 007dbdeff38c0d4488d0954c52467936, type: 3}
   isStopStart: 0
 --- !u!114 &285398679
 MonoBehaviour:
@@ -653,7 +653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89cae52a604257498729ed3784fd26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NamePlayer: {fileID: 914435640}
+  parent: {fileID: 0}
+  Login: {fileID: 0}
+  Register: {fileID: 0}
+  LoginObj: {fileID: 0}
+  RegisterObj: {fileID: 0}
 --- !u!1 &586548819
 GameObject:
   m_ObjectHideFlags: 0
