@@ -33,7 +33,7 @@ public class HighScore : MonoBehaviour
             {
                 HighScoreContent dataPlayer = new HighScoreContent();
                 string[] cols = getScore[i].Split('\t');
-                Debug.Log($"{cols[0]} - {cols[1]}");
+                //Debug.Log($"{cols[0]} - {cols[1]}");
                 dataPlayer.name = cols[0];
                 dataPlayer.Time = float.Parse(cols[1]);
                 highScoreContents.Add(dataPlayer);

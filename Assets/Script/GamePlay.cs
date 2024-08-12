@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -26,6 +28,8 @@ public class GamePlay : MonoBehaviour
 
     [SerializeField] EndGame endGame;
     public static float GameTime { get; set; }
+
+    public bool checkWin = false;
 
     // Phương thức Awake được gọi khi script này được khởi tạo
     private void Awake()
@@ -65,15 +69,15 @@ public class GamePlay : MonoBehaviour
 
         if(numberOfZombies == deadZombies)
         {
-            Debug.Log("Win Game !!!");
-            
+            //Debug.Log("Win Game !!!");
+            checkWin = true;
             endGame.winGame();
             WinGame_time.text = GameTime.ToString();
 
             WinGame_time.text = GameTime.ToString("F1") + " Giây";
-
         }
     }
+
     public void gamePaused()
     {
         stopGame = !stopGame;

@@ -44,7 +44,7 @@ public class PeaShooter : PlantBase
         // Kiểm tra xem có zombie trong vùng tấn công không
         if (ZombiesDetected().collider != null)
         {
-            Debug.Log(ZombiesDetected().collider.name);
+            //Debug.Log(ZombiesDetected().collider.name);
             animator.SetBool("check", true); // Đặt biến check của animator thành true nếu phát hiện zombie
         }
         else

@@ -6,6 +6,7 @@ public class CherryBomb : PlantBase
 {
     public AudioClip sound;
     private AudioSource audioSource;
+
     protected override void Start()
     {
         audioSource = GetComponent<AudioSource>();
