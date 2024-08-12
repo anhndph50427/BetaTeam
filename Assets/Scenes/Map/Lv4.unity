@@ -393,11 +393,11 @@ PrefabInstance:
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[2].zombiePrefab
       value: 
-      objectReference: {fileID: 8634695116890735899, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
+      objectReference: {fileID: 1239488641124010679, guid: 78ac4f74c1a584a4b87599e65c040aeb, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[4].zombiePrefab
       value: 
-      objectReference: {fileID: 8634695116890735899, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
+      objectReference: {fileID: 1115366262091824679, guid: e829c1a498637284388631238e965ed0, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[5].zombiePrefab
       value: 
@@ -409,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[7].zombiePrefab
       value: 
-      objectReference: {fileID: 8634695116890735899, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
+      objectReference: {fileID: 1239488641124010679, guid: 78ac4f74c1a584a4b87599e65c040aeb, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[8].zombiePrefab
       value: 
@@ -473,7 +473,7 @@ PrefabInstance:
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[23].zombiePrefab
       value: 
-      objectReference: {fileID: 8634695116890735899, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
+      objectReference: {fileID: 800036889221269575, guid: 66be9a969a5b0804980671372834ac42, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[24].zombiePrefab
       value: 
@@ -493,7 +493,7 @@ PrefabInstance:
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[28].zombiePrefab
       value: 
-      objectReference: {fileID: 1115366262091824679, guid: e829c1a498637284388631238e965ed0, type: 3}
+      objectReference: {fileID: 800036889221269575, guid: 66be9a969a5b0804980671372834ac42, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[29].zombiePrefab
       value: 
@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[36].zombiePrefab
       value: 
-      objectReference: {fileID: 8634695116890735899, guid: e1a98a15825e5b04fbd85904d4b51b1d, type: 3}
+      objectReference: {fileID: 800036889221269575, guid: 66be9a969a5b0804980671372834ac42, type: 3}
     - target: {fileID: 348594764363817782, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: notifications.Array.data[37].zombiePrefab
       value: 
@@ -734,6 +734,18 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 
       objectReference: {fileID: 102900000, guid: 1cf4cf617eb49014fb5a71621075599c, type: 3}
+    - target: {fileID: 6949256621585657372, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sunScore
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949256621585657372, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: WinGame_time
+      value: 
+      objectReference: {fileID: 1273777202}
+    - target: {fileID: 7885926473038631422, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: maxTime
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: 8326931755984397381, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -762,6 +774,17 @@ PrefabInstance:
 --- !u!114 &1273777201 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6022527849400538516, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+  m_PrefabInstance: {fileID: 1273777200}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1273777202 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2030726706606169790, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
   m_PrefabInstance: {fileID: 1273777200}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

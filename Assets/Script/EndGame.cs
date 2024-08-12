@@ -11,7 +11,7 @@ public class EndGame : MonoBehaviour
     
     void Start()
     {
-        OffActive.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class EndGame : MonoBehaviour
             Time.timeScale = 0f;
             if (MenuLose != null)
             {
+                OffActive.SetActive(false);
                 MenuLose.SetActive(true);
             }
             else Debug.Log("Menu Lose Null");
@@ -36,6 +37,7 @@ public class EndGame : MonoBehaviour
     {
         if(MenuWin != null)
         {
+            OffActive.SetActive(false);
             Time.timeScale = 0f;
             StartCoroutine(InserScore());
             MenuWin.SetActive(true);

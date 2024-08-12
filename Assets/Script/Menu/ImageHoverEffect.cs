@@ -70,8 +70,10 @@ public class ImageHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExi
         // Chuyển cảnh nếu sceneToLoad không rỗng
         if (sceneToLoad != null)
         {
+            GamePlay.GameTime = 0f;
             string sceneName = sceneToLoad.name; 
             SceneManager.LoadScene(sceneName);
+            
         }
 
         // tạm dừng hoặc tiếp tục game

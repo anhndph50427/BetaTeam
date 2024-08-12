@@ -5553,6 +5553,7 @@ MonoBehaviour:
   SpawnZombiee: {fileID: 348594764363817782}
   numberOfZombies: 5
   deadZombies: 0
+  WinGame_time: {fileID: 2030726706606169790}
   endGame: {fileID: 5816924840094950758}
 --- !u!82 &6174818022477385406
 AudioSource:
@@ -9679,6 +9680,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7757058089228257591, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757058089228257591, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757058089228257591, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757058089228257591, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245232208711870550, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245232208711870550, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245232208711870550, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245232208711870550, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8439639993384112517, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
       propertyPath: m_Camera
       value: 
@@ -9698,13 +9731,13 @@ PrefabInstance:
       addedObject: {fileID: 1629824514707093693}
     - targetCorrespondingSourceObject: {fileID: 7309250141071433064, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8397068979191297857}
+    - targetCorrespondingSourceObject: {fileID: 7309250141071433064, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2487868765044390309}
     - targetCorrespondingSourceObject: {fileID: 7309250141071433064, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1034669172906651102}
-    - targetCorrespondingSourceObject: {fileID: 7309250141071433064, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8397068979191297857}
     - targetCorrespondingSourceObject: {fileID: 3639399299695541681, guid: 1cd5cec5e16bd1b468e81bf9a6795f75, type: 3}
       insertIndex: -1
       addedObject: {fileID: 962560213334766012}

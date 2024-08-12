@@ -878,6 +878,14 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 
       objectReference: {fileID: 102900000, guid: 72b0f98422add41469f1a6c15d52622a, type: 3}
+    - target: {fileID: 6949256621585657372, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sunScore
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885926473038631422, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: maxTime
+      value: 285
+      objectReference: {fileID: 0}
     - target: {fileID: 8326931755984397381, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

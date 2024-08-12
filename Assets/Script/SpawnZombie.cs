@@ -22,9 +22,9 @@ public class SpawnZombie : MonoBehaviour
         int currentGameTime = Mathf.FloorToInt(GamePlay.GameTime);
 
         // Kiểm tra từng thông báo
-        foreach (Notification notification in notifications)
+        foreach (Notification x in notifications)
         {
-            if (!notification.hasShown && currentGameTime >= notification.showTime)
+            if (!x.hasShown && currentGameTime >= x.showTime)
             {
                 // In ra thông báo
                 //Debug.Log(notification.message);
@@ -34,10 +34,10 @@ public class SpawnZombie : MonoBehaviour
                 Transform spawnPoint = spawnPoints[randomIndex];
 
                 // Tạo zombie tại điểm spawn ngẫu nhiên
-                Instantiate(notification.zombiePrefab, spawnPoint.position, Quaternion.identity);
+                Instantiate(x.zombiePrefab, spawnPoint.position, Quaternion.identity);
 
                 // Đánh dấu thông báo đã được hiển thị
-                notification.hasShown = true;
+                x.hasShown = true;
             }
         }
     }

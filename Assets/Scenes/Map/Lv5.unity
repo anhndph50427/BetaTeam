@@ -122,6 +122,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &625919390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2030726706606169790, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+  m_PrefabInstance: {fileID: 1847409486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &965682425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -871,6 +882,18 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 
       objectReference: {fileID: 102900000, guid: cea8dc6b3bf55eb448f5b99ff39a9591, type: 3}
+    - target: {fileID: 6949256621585657372, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: sunScore
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949256621585657372, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: WinGame_time
+      value: 
+      objectReference: {fileID: 625919390}
+    - target: {fileID: 7885926473038631422, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
+      propertyPath: maxTime
+      value: 265
+      objectReference: {fileID: 0}
     - target: {fileID: 8326931755984397381, guid: 801e088c3cdc1c845a347d5a16cceb53, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

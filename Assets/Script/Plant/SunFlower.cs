@@ -8,7 +8,7 @@ public class SunFlower : PlantBase
     protected override void Start()
     {
         base.Start();
-        InvokeRepeating("spanwSun", 3, 4); // Hàm gọi methodName sau thời gian và sau đó sẽ lặp lại theo giây
+        InvokeRepeating("spanwSun", 3, 15); // Hàm gọi methodName sau thời gian và sau đó sẽ lặp lại theo giây
     }
 
     protected override void Update()
