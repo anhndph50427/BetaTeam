@@ -19,33 +19,34 @@ public class PushWaterItem : MonoBehaviour
 
     private void Start()
     {
-        indexLevel = PushWater.indextLevel;
-        indexSave = PlayerPrefs.GetInt("indexLevel");
-        Debug.Log(indexSave);
         loadAtribute();
-
         UpgrateBtn.onClick.AddListener(() => Upgrate());
     }
 
-    private void Update()
-    {
-        PlayerPrefs.SetInt("indexLevel", indexLevel);
-    }
 
     void loadAtribute()
     {
         nameTxt.text = PushWater.nameSkill;
-        levelTxt.text = $"{indexSave + 1}";
-        coolDownTxt.text = PushWater.infor[indexSave].coolDonw.ToString();
-        pointTxt.text = PushWater.infor[indexSave].force.ToString();
-        unlockCostTxt.text = PushWater.infor[indexSave].UnlockCost.ToString();
+        levelTxt.text = $"{indexLevel + 1}";
+        coolDownTxt.text = PushWater.infor[indexLevel].coolDonw.ToString();
+        pointTxt.text = PushWater.infor[indexLevel].force.ToString();
+        unlockCostTxt.text = PushWater.infor[indexLevel].UnlockCost.ToString();
     }
 
     void Upgrate()
     {
-        indexSave++;
 
-        loadAtribute();
-        if (indexSave == PushWater.infor.Length - 1) UpgrateBtn.interactable = false;
+        if (ShopUI.instance.Coins >= PushWater.infor[indexLevel].UnlockCost)
+        {
+            indexLevel++;
+            ShopUI.instance.Coins -= PushWater.infor[indexLevel].UnlockCost;
+            loadAtribute();
+            
+
+        }
+        
+        if (indexLevel == PushWater.infor.Length - 1) UpgrateBtn.interactable = false;
+
+
     }
 }
